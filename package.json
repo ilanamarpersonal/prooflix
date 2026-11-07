@@ -1,0 +1,12 @@
+{
+  "name": "prooflix",
+  "version": "1.0.0",
+  "description": "Prooflix marketing site",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 8765"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}

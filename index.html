@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PSJWVWRZ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2PSJWVWRZ0');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prooflix – Self-Hosted Data Platform for Spark Pipelines</title>
+  <meta name="description" content="Prooflix is a self-hosted data platform. Run Spark pipelines and a Bronze, Silver, Gold medallion lakehouse on-premise or on any cloud, with no SaaS subscription fees.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="canonical" href="https://www.prooflix.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Prooflix">
+  <meta property="og:title" content="Prooflix – Self-Hosted Data Platform for Spark Pipelines">
+  <meta property="og:description" content="Run Spark pipelines and a medallion lakehouse on infrastructure you own. One installation, no per-seat licences, no compute markup.">
+  <meta property="og:url" content="https://www.prooflix.com/">
+  <meta property="og:image" content="https://www.prooflix.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Prooflix, self-hosted data platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prooflix – Self-Hosted Data Platform for Spark Pipelines">
+  <meta name="twitter:description" content="Run Spark pipelines and a medallion lakehouse on infrastructure you own. One installation, no per-seat licences, no compute markup.">
+  <meta name="twitter:image" content="https://www.prooflix.com/assets/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="css/styles.css?v=10">
+  <link rel="stylesheet" href="css/styles.css?v=10">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.prooflix.com/#org",
+      "name": "Prooflix",
+      "url": "https://www.prooflix.com/",
+      "logo": "https://www.prooflix.com/assets/prooflix-logo.svg",
+      "description": "Early-stage open project. Not a registered company."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.prooflix.com/#website",
+      "url": "https://www.prooflix.com/",
+      "name": "Prooflix",
+      "publisher": {
+        "@id": "https://www.prooflix.com/#org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Prooflix",
+      "url": "https://www.prooflix.com/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux, Kubernetes",
+      "description": "Self-hosted data platform for Spark pipelines and medallion architecture, installed on-premise or on any cloud without SaaS subscription fees. Early-stage project; features are in development.",
+      "featureList": [
+        "Data pipelines as code",
+        "Medallion architecture (Bronze, Silver, Gold)",
+        "Spark jobs inside every pipeline",
+        "Scheduling and dependencies",
+        "Observability",
+        "Open table formats"
+      ],
+      "publisher": {
+        "@id": "https://www.prooflix.com/#org"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Prooflix?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prooflix is a self-hosted data platform for building data pipelines and running a medallion architecture. You install it on your own servers, Kubernetes cluster or cloud account instead of renting a hosted SaaS data platform."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I run a medallion architecture on-premise?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Prooflix implements the Bronze, Silver and Gold medallion layers out of the box. Raw data lands in Bronze, is cleaned and validated into Silver, and is curated into Gold tables for analytics, all inside your own infrastructure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do Spark pipelines run in Prooflix?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each pipeline can run Spark jobs on your cluster. Jobs are scheduled, queued and retried as part of the pipeline run, so there is no separate job server to manage and no compute credits to buy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Prooflix work on AWS, Azure, Google Cloud or fully on-premise?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The installation complies with any cloud or SaaS provider and also runs fully on-premise on VMs or bare metal. Storage can be local disks or any S3-compatible object store."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Prooflix avoid SaaS subscription costs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is one installation with no per-user licences, no per-workspace fees and no compute markup. You pay for the hardware you already run, so adding users or pipelines does not increase the bill."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there vendor lock-in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Prooflix uses plain Spark and open table formats, so your data stays readable by any engine and you can migrate at any time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Prooflix a company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet. Prooflix is an early-stage project maintained by a small group of contributors. There is no registered company, no sales team and no paid plan. The features on this page describe where the project is heading, and some are still in development."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+<div class="notice" role="note">
+  <div class="container">
+    <strong>Early-stage project.</strong> Prooflix is a work in progress built by a small group of contributors. It is not a company and not a commercial product yet.
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="brand" href="#top" aria-label="Prooflix home">
+      <img src="assets/prooflix-logo.svg" alt="Prooflix" width="175" height="40" fetchpriority="high">
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="#why">Why Prooflix</a>
+      <a href="#platform">Platform</a>
+      <a href="#how">How it works</a>
+      <a href="#cost">Cost model</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary btn-sm" href="#start">Get started</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Self-hosted data platform</p>
+        <h1><span class="h1-line">Your self-hosted data platform.</span><br>Your servers.<br><span class="accent">No subscription meter.</span></h1>
+        <p class="hook">Stop renting your data platform. Own it.</p>
+        <p class="lead">
+          Prooflix lets your team build pipelines that run Spark jobs through a medallion architecture,
+          installed on infrastructure you already own.
+          No per-seat licences, no compute markup, and no data leaving your network.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#start">Install Prooflix</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+        <ul class="hero-points">
+          <li>Runs on Kubernetes, VMs or bare metal</li>
+          <li>Installs with any cloud or SaaS provider, or fully on-premise</li>
+          <li>Open table formats, no lock-in</li>
+          <li>Single installation for the whole team</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 520 392" xmlns="http://www.w3.org/2000/svg" class="medallion">
+          <!-- sources -->
+          <g class="node source">
+            <rect x="24" y="110" width="120" height="44" rx="10"/>
+            <text x="84" y="137">Databases</text>
+          </g>
+          <g class="node source">
+            <rect x="24" y="174" width="120" height="44" rx="10"/>
+            <text x="84" y="201">Event streams</text>
+          </g>
+          <g class="node source">
+            <rect x="24" y="238" width="120" height="44" rx="10"/>
+            <text x="84" y="265">Files &amp; APIs</text>
+          </g>
+          <!-- pipeline container -->
+          <g class="pipeline">
+            <rect x="214" y="44" width="292" height="332" rx="16"/>
+            <text class="pipeline-label" x="232" y="68">Pipeline run</text>
+          </g>
+          <!-- ingest edges -->
+          <path class="edge" d="M144 132 C 180 132, 180 126, 236 126"/>
+          <path class="edge" d="M144 196 C 180 196, 180 126, 236 126"/>
+          <path class="edge" d="M144 260 C 180 260, 180 126, 236 126"/>
+          <!-- layers -->
+          <g class="layer bronze">
+            <rect x="236" y="96" width="250" height="60" rx="12"/>
+            <text class="layer-name" x="256" y="121">Bronze</text>
+            <text class="layer-desc" x="256" y="141">Raw, append-only landing</text>
+          </g>
+          <path class="edge down" d="M361 156 L 361 196"/>
+          <g class="layer silver">
+            <rect x="236" y="196" width="250" height="60" rx="12"/>
+            <text class="layer-name" x="256" y="221">Silver</text>
+            <text class="layer-desc" x="256" y="241">Cleaned, validated, joined</text>
+          </g>
+          <path class="edge down" d="M361 256 L 361 296"/>
+          <g class="layer gold">
+            <rect x="236" y="296" width="250" height="60" rx="12"/>
+            <text class="layer-name" x="256" y="321">Gold</text>
+            <text class="layer-desc" x="256" y="341">Curated, ready for analytics</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="container">
+      <p class="hero-note">Prooflix is at an early stage. The capabilities described on this page are the project's direction and are still being built. There is no company behind it yet.</p>
+    </div>
+  </section>
+
+  <!-- Value strip -->
+  <section class="strip">
+    <div class="container strip-grid">
+      <div>
+        <h3>Runs where your data lives</h3>
+        <p>Install inside your own network or on any cloud provider you already use. Nothing is uploaded to a vendor-owned platform.</p>
+      </div>
+      <div>
+        <h3>Pay for hardware, not usage</h3>
+        <p>No per-seat fees and no compute credits. The cost is the servers you already run.</p>
+      </div>
+      <div>
+        <h3>Standard tools, open formats</h3>
+        <p>Spark, SQL and open table formats. Your data stays readable by any engine.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section id="why" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Why Prooflix</p>
+        <h2>Everything a hosted data platform gives you, without renting it.</h2>
+        <p class="sub">
+          Managed SaaS platforms are convenient until the invoice grows with every user, every query
+          and every gigabyte of egress. Prooflix brings the same workflow in-house.
+        </p>
+      </div>
+
+      <div class="compare">
+        <div class="compare-col">
+          <h3>Hosted SaaS platform</h3>
+          <ul class="list list-neutral">
+            <li>Monthly bill scales with seats, compute and storage</li>
+            <li>Data is copied into the vendor's cloud account</li>
+            <li>Egress and cross-region traffic are billed separately</li>
+            <li>Proprietary runtime makes migration costly</li>
+            <li>Tied to the hosting provider the vendor chose</li>
+            <li>Compliance reviews for every new workspace</li>
+          </ul>
+        </div>
+        <div class="compare-col compare-highlight">
+          <h3>Prooflix, self-hosted</h3>
+          <ul class="list list-check">
+            <li>One installation, flat cost, unlimited users</li>
+            <li>Data never leaves your network or your controls</li>
+            <li>No egress charges between your own systems</li>
+            <li>Plain Spark and open formats, portable by design</li>
+            <li>Installation complies with any cloud or SaaS provider, or on-premise</li>
+            <li>Fits the security posture you already have</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform -->
+  <section id="platform" class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Platform</p>
+        <h2>Built for pipelines, layered data and Spark processing.</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 6h6v4H4zM14 14h6v4h-6zM10 8h2a2 2 0 0 1 2 2v4"/></svg>
+          </div>
+          <h3>Pipelines as code</h3>
+          <p>Define ingestion and transformation steps in versioned configuration. Review changes like any other code.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v4H4zM4 10h16v4H4zM4 15h16v4H4z"/></svg>
+          </div>
+          <h3>Medallion architecture built in</h3>
+          <p>Bronze, Silver and Gold layers are first-class. Promote data between layers with validation at each step.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg>
+          </div>
+          <h3>Spark inside every pipeline</h3>
+          <p>Each pipeline can run Spark jobs on your cluster. Jobs queue, scale and retry as part of the pipeline run.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+          </div>
+          <h3>Scheduling and dependencies</h3>
+          <p>Run on a cron schedule or on upstream completion. Backfill ranges and re-run failed steps only.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/><path d="M4 21h16"/></svg>
+          </div>
+          <h3>Observability</h3>
+          <p>Logs, run history, row counts and durations for every task, in one place, kept on your own storage.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3l8 4-8 4-8-4 8-4z"/><path d="M4 12l8 4 8-4M4 17l8 4 8-4"/></svg>
+          </div>
+          <h3>Open formats and governance</h3>
+          <p>Tables stay in open formats with schema history and access controls that plug into your directory.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>From empty servers to a running lakehouse in four steps.</h2>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <h3>Install</h3>
+          <p>Deploy Prooflix to your Kubernetes cluster or a set of VMs with a single command. The installation complies with every major cloud and SaaS provider, and runs just as well fully on-premise. Storage can be local disks or any S3-compatible object store.</p>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <h3>Connect sources</h3>
+          <p>Point Prooflix at your databases, message queues, file drops and internal APIs using built-in connectors.</p>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <h3>Define pipelines</h3>
+          <p>Describe how data lands in Bronze, how it is cleaned into Silver and how it is shaped into Gold tables for analytics.</p>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <h3>Run and watch</h3>
+          <p>Pipelines run their Spark jobs on a schedule or on demand. Track every run from the dashboard.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Cost model -->
+  <section id="cost" class="section section-soft">
+    <div class="container cost-grid">
+      <div>
+        <p class="eyebrow">Cost model</p>
+        <h2>One installation. Zero usage meter.</h2>
+        <p class="sub">
+          Hosted platforms charge for every unit of compute, every active user and every byte moved.
+          Those costs rise with adoption, so success gets expensive. Prooflix runs on hardware you already
+          budget for, so adding a team or a pipeline does not add a line to the invoice.
+        </p>
+        <ul class="list list-check">
+          <li>No per-user or per-workspace licences</li>
+          <li>No compute credits or runtime surcharge</li>
+          <li>No egress fees inside your own network</li>
+          <li>Predictable spend that finance can plan around</li>
+        </ul>
+      </div>
+      <div class="cost-visual" aria-hidden="true">
+        <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+          <g class="axis">
+            <line x1="50" y1="250" x2="430" y2="250"/>
+            <line x1="50" y1="30" x2="50" y2="250"/>
+            <text x="240" y="282">Users and pipelines over time</text>
+            <text x="-140" y="22" transform="rotate(-90)">Monthly cost</text>
+          </g>
+          <path class="line-saas" d="M50 230 C 150 220, 250 170, 430 60"/>
+          <path class="line-prooflix" d="M50 150 L 430 150"/>
+          <g class="legend">
+            <rect x="300" y="40" width="14" height="3" class="sw-saas"/>
+            <text x="322" y="44">Hosted SaaS</text>
+            <rect x="300" y="62" width="14" height="3" class="sw-prooflix"/>
+            <text x="322" y="66">Prooflix</text>
+          </g>
+          <text class="note" x="430" y="296" text-anchor="end">Illustrative</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions teams ask before leaving a hosted data platform.</h2>
+      </div>
+      <div class="faq">
+        <article class="faq-item">
+          <h3>What is Prooflix?</h3>
+          <p>Prooflix is a self-hosted data platform for building data pipelines and running a medallion architecture. You install it on your own servers, Kubernetes cluster or cloud account instead of renting a hosted SaaS data platform.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can I run a medallion architecture on-premise?</h3>
+          <p>Yes. Prooflix implements the Bronze, Silver and Gold medallion layers out of the box. Raw data lands in Bronze, is cleaned and validated into Silver, and is curated into Gold tables for analytics, all inside your own infrastructure.</p>
+        </article>
+        <article class="faq-item">
+          <h3>How do Spark pipelines run in Prooflix?</h3>
+          <p>Each pipeline can run Spark jobs on your cluster. Jobs are scheduled, queued and retried as part of the pipeline run, so there is no separate job server to manage and no compute credits to buy.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Does Prooflix work on AWS, Azure, Google Cloud or fully on-premise?</h3>
+          <p>The installation complies with any cloud or SaaS provider and also runs fully on-premise on VMs or bare metal. Storage can be local disks or any S3-compatible object store.</p>
+        </article>
+        <article class="faq-item">
+          <h3>How does Prooflix avoid SaaS subscription costs?</h3>
+          <p>There is one installation with no per-user licences, no per-workspace fees and no compute markup. You pay for the hardware you already run, so adding users or pipelines does not increase the bill.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Is there vendor lock-in?</h3>
+          <p>No. Prooflix uses plain Spark and open table formats, so your data stays readable by any engine and you can migrate at any time.</p>
+        </article>
+        <article class="faq-item" id="contribute">
+          <h3>Is Prooflix a company?</h3>
+          <p>Not yet. Prooflix is an early-stage project maintained by a small group of contributors. There is no registered company, no sales team and no paid plan. The features on this page describe where the project is heading, and some are still in development.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-soft">
+    <div class="container contact-grid">
+      <div class="section-head contact-copy">
+        <p class="eyebrow">Contact</p>
+        <h2>Leave your details and we will get back to you.</h2>
+        <p class="sub">
+          Tell us about your data platform plans, ask a question, or offer to contribute.
+          Messages go straight to the Prooflix team inbox and we reply by email.
+        </p>
+      </div>
+      <form id="contact-form" class="contact-form" novalidate>
+        <input type="hidden" name="access_key" value="0995b647-5dc6-49ca-8b1e-10832a7eed5d">
+        <input type="hidden" name="subject" value="New contact from prooflix.com">
+        <input type="hidden" name="from_name" value="Prooflix website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="cf-message">Message <span class="optional">(optional)</span></label>
+          <textarea id="cf-message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="form-note">We only use your details to reply to you.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="start" class="section cta">
+    <div class="container cta-box">
+      <img src="assets/prooflix-mark.svg" alt="" width="56" height="58" class="cta-mark" loading="lazy">
+      <h2>Want to follow or help shape Prooflix?</h2>
+      <p>Prooflix is an early-stage project, not a company. Try the current build, share feedback, or contribute to where it goes next.</p>
+      <div class="hero-actions center">
+        <!-- TODO: replace with the docs URL once the install guide is published -->
+        <a class="btn btn-primary" href="#how">Read the install guide</a>
+        <a class="btn btn-ghost" href="#contact">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div class="footer-brand">
+      <img src="assets/prooflix-mark.svg" alt="Prooflix" width="28" height="29" loading="lazy">
+      <span>Prooflix</span>
+    </div>
+    <nav class="footer-links">
+      <a href="#why">Why Prooflix</a>
+      <a href="#platform">Platform</a>
+      <a href="#how">How it works</a>
+      <a href="#cost">Cost model</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="footer-copy">&copy; <span id="year"></span> Prooflix. An early-stage project, not a registered company.</p>
+  </div>
+</footer>
+
+<script src="js/main.js?v=4"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
