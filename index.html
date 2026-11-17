@@ -13,14 +13,14 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prooflix – On-Prem Data Platform for Spark Pipelines | Self-Hosted</title>
-  <meta name="description" content="Prooflix is a data platform on prem: a self-hosted, on-premise data platform. Run Spark pipelines and a Bronze, Silver, Gold medallion lakehouse on-premise or on any cloud, with no SaaS subscription fees.">
+  <meta name="description" content="Prooflix is an end-to-end data platform on prem: ingest from any source, run Spark pipelines through a Bronze, Silver, Gold medallion lakehouse and serve the results as a relational database, all in one self-hosted installation with no SaaS subscription fees.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#FFFFFF">
   <link rel="canonical" href="https://www.prooflix.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Prooflix">
   <meta property="og:title" content="Prooflix – On-Prem Data Platform for Spark Pipelines | Self-Hosted">
-  <meta property="og:description" content="The data platform on prem. Run Spark pipelines and a medallion lakehouse on infrastructure you own. One installation, no per-seat licences, no compute markup.">
+  <meta property="og:description" content="The end-to-end data platform on prem. Ingestion, Spark pipelines, a medallion lakehouse and a relational database for serving, all in one installation on infrastructure you own.">
   <meta property="og:url" content="https://www.prooflix.com/">
   <meta property="og:image" content="https://www.prooflix.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -28,15 +28,15 @@
   <meta property="og:image:alt" content="Prooflix, on-prem self-hosted data platform">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Prooflix – On-Prem Data Platform for Spark Pipelines | Self-Hosted">
-  <meta name="twitter:description" content="The data platform on prem. Run Spark pipelines and a medallion lakehouse on infrastructure you own. One installation, no per-seat licences, no compute markup.">
+  <meta name="twitter:description" content="The end-to-end data platform on prem. Ingestion, Spark pipelines, a medallion lakehouse and a relational database for serving, all in one installation on infrastructure you own.">
   <meta name="twitter:image" content="https://www.prooflix.com/assets/og-image.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
-  <link rel="preload" as="style" href="css/styles.css?v=10">
-  <link rel="stylesheet" href="css/styles.css?v=10">
+  <link rel="preload" as="style" href="css/styles.css?v=12">
+  <link rel="stylesheet" href="css/styles.css?v=12">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,14 +62,16 @@
       "@type": "SoftwareApplication",
       "name": "Prooflix",
       "alternateName": "Prooflix on-prem data platform",
-      "keywords": "data platform on prem, on-prem data platform, on-premise data platform, self-hosted data platform, Spark pipelines, medallion architecture",
+      "keywords": "end-to-end data platform, data platform on prem, on-prem data platform, on-premise data platform, self-hosted data platform, Spark pipelines, medallion architecture",
       "url": "https://www.prooflix.com/",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Linux, Kubernetes",
-      "description": "On-prem, self-hosted data platform for Spark pipelines and medallion architecture, installed on-premise or on any cloud without SaaS subscription fees. Early-stage project; features are in development.",
+      "description": "End-to-end, self-hosted data platform covering ingestion, Spark pipelines, medallion architecture and serving data as a relational database, installed on-premise or on any cloud without SaaS subscription fees. Early-stage project; features are in development.",
       "featureList": [
+        "Ingestion from databases, files, APIs and streams",
         "Data pipelines as code",
         "Medallion architecture (Bronze, Silver, Gold)",
+        "Gold data served as a relational database (SQL, JDBC, ODBC)",
         "Spark jobs inside every pipeline",
         "Scheduling and dependencies",
         "Observability",
@@ -87,7 +89,15 @@
           "name": "What is Prooflix?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Prooflix is a self-hosted data platform for building data pipelines and running a medallion architecture. You install it on your own servers, Kubernetes cluster or cloud account instead of renting a hosted SaaS data platform."
+            "text": "Prooflix is a self-hosted, end-to-end data platform. It ingests data, processes it in Spark pipelines through a Bronze, Silver and Gold medallion architecture, and serves the result as a relational database. You install it on your own servers, Kubernetes cluster or cloud account instead of renting a hosted SaaS data platform."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Prooflix an end-to-end data platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Prooflix covers the whole path in a single installation: ingestion from your sources, pipeline processing with Spark, Bronze, Silver and Gold medallion layers, and serving Gold data as a relational database you query with plain SQL. There is no need to stitch together separate ingestion, processing and serving products."
           }
         },
         {
@@ -169,6 +179,7 @@
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav">
+      <a href="#end-to-end">End to end</a>
       <a href="#why">Why Prooflix</a>
       <a href="#platform">Platform</a>
       <a href="#how">How it works</a>
@@ -185,13 +196,14 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Data platform on prem</p>
-        <h1><span class="h1-line">Your on-prem data platform.</span><br>Your servers.<br><span class="accent">No subscription meter.</span></h1>
+        <p class="eyebrow">End-to-end data platform on prem</p>
+        <h1><span class="h1-line">Your on-prem data platform.</span><br>Your servers.<br><span class="accent">Every layer, from raw to SQL, under one&nbsp;roof.</span></h1>
         <p class="hook">Stop renting your data platform. Own it.</p>
         <p class="lead">
-          Prooflix lets your team build pipelines that run Spark jobs through a medallion architecture,
-          installed on infrastructure you already own.
-          No per-seat licences, no compute markup, and no data leaving your network.
+          Prooflix is one end-to-end platform: ingest from any source, process it in Spark pipelines
+          through Bronze, Silver and Gold, and serve the result as a relational database you query with plain SQL.
+          All in a single installation on infrastructure you already own, with no per-seat licences,
+          no compute markup and no data leaving your network.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#start">Install Prooflix</a>
@@ -201,54 +213,14 @@
           <li>Runs on Kubernetes, VMs or bare metal</li>
           <li>Installs with any cloud or SaaS provider, or fully on-premise</li>
           <li>Open table formats, no lock-in</li>
-          <li>Single installation for the whole team</li>
+          <li>Ingestion to SQL serving in a single installation</li>
         </ul>
       </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <svg viewBox="0 0 520 392" xmlns="http://www.w3.org/2000/svg" class="medallion">
-          <!-- sources -->
-          <g class="node source">
-            <rect x="24" y="110" width="120" height="44" rx="10"/>
-            <text x="84" y="137">Databases</text>
-          </g>
-          <g class="node source">
-            <rect x="24" y="174" width="120" height="44" rx="10"/>
-            <text x="84" y="201">Event streams</text>
-          </g>
-          <g class="node source">
-            <rect x="24" y="238" width="120" height="44" rx="10"/>
-            <text x="84" y="265">Files &amp; APIs</text>
-          </g>
-          <!-- pipeline container -->
-          <g class="pipeline">
-            <rect x="214" y="44" width="292" height="332" rx="16"/>
-            <text class="pipeline-label" x="232" y="68">Pipeline run</text>
-          </g>
-          <!-- ingest edges -->
-          <path class="edge" d="M144 132 C 180 132, 180 126, 236 126"/>
-          <path class="edge" d="M144 196 C 180 196, 180 126, 236 126"/>
-          <path class="edge" d="M144 260 C 180 260, 180 126, 236 126"/>
-          <!-- layers -->
-          <g class="layer bronze">
-            <rect x="236" y="96" width="250" height="60" rx="12"/>
-            <text class="layer-name" x="256" y="121">Bronze</text>
-            <text class="layer-desc" x="256" y="141">Raw, append-only landing</text>
-          </g>
-          <path class="edge down" d="M361 156 L 361 196"/>
-          <g class="layer silver">
-            <rect x="236" y="196" width="250" height="60" rx="12"/>
-            <text class="layer-name" x="256" y="221">Silver</text>
-            <text class="layer-desc" x="256" y="241">Cleaned, validated, joined</text>
-          </g>
-          <path class="edge down" d="M361 256 L 361 296"/>
-          <g class="layer gold">
-            <rect x="236" y="296" width="250" height="60" rx="12"/>
-            <text class="layer-name" x="256" y="321">Gold</text>
-            <text class="layer-desc" x="256" y="341">Curated, ready for analytics</text>
-          </g>
-        </svg>
-      </div>
+      <figure class="hero-visual hero-film">
+        <video src="assets/prooflix-core-film.mp4" poster="assets/prooflix-core-film-poster.jpg" controls playsinline preload="metadata" width="1920" height="1080" aria-label="30 second film: Prooflix end to end, from ingestion through Spark pipelines and medallion layers to a relational database"></video>
+        <figcaption>Prooflix in 30 seconds.</figcaption>
+      </figure>
     </div>
     <div class="container">
       <p class="hero-note">Prooflix is at an early stage. The capabilities described on this page are the project's direction and are still being built. There is no company behind it yet.</p>
@@ -270,6 +242,26 @@
         <h3>Standard tools, open formats</h3>
         <p>Spark, SQL and open table formats. Your data stays readable by any engine.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- End to end -->
+  <section id="end-to-end" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">End to end</p>
+        <h2>From raw data to SQL. All in a single house.</h2>
+        <p class="sub">
+          Most data stacks are stitched together from separate ingestion, processing, lakehouse and serving products.
+          Prooflix does the whole path in one installation, under one security model, on servers you own.
+        </p>
+      </div>
+      <ol class="e2e">
+        <li><span class="e2e-num">01</span><h3>Ingest</h3><p>Databases, files, APIs and event streams, in batch, CDC or streaming mode.</p></li>
+        <li><span class="e2e-num">02</span><h3>Process</h3><p>Spark pipelines defined in versioned config, scheduled and retried for you.</p></li>
+        <li><span class="e2e-num">03</span><h3>Refine</h3><p>Medallion layers: Bronze raw, Silver cleaned and validated, Gold curated.</p></li>
+        <li><span class="e2e-num">04</span><h3>Serve</h3><p>Gold data exposed as a relational database. Query it with plain SQL or any BI tool.</p></li>
+      </ol>
     </div>
   </section>
 
@@ -317,7 +309,7 @@
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">Platform</p>
-        <h2>Built for pipelines, layered data and Spark processing.</h2>
+        <h2>Every stage of the data lifecycle, in one platform.</h2>
       </div>
 
       <div class="cards">
@@ -363,6 +355,27 @@
           <h3>Open formats and governance</h3>
           <p>Tables stay in open formats with schema history and access controls that plug into your directory.</p>
         </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 12h4l2-5 4 10 2-5h4"/></svg>
+          </div>
+          <h3>Ingestion built in</h3>
+          <p>Connectors for databases, files, APIs and event streams, in batch, CDC or streaming mode, with no separate ingestion tool.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg>
+          </div>
+          <h3>Served as a relational database</h3>
+          <p>Gold tables are exposed as a relational database. Query them with plain SQL or connect BI tools and apps over JDBC and ODBC.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+          </div>
+          <h3>All in a single house</h3>
+          <p>Ingestion, processing, medallion layers and serving share one installation, one security model and one place to operate.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -372,7 +385,7 @@
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">How it works</p>
-        <h2>From empty servers to a running lakehouse in four steps.</h2>
+        <h2>From empty servers to queryable data in four steps.</h2>
       </div>
 
       <ol class="steps">
@@ -393,8 +406,8 @@
         </li>
         <li>
           <span class="step-num">4</span>
-          <h3>Run and watch</h3>
-          <p>Pipelines run their Spark jobs on a schedule or on demand. Track every run from the dashboard.</p>
+          <h3>Run and query</h3>
+          <p>Pipelines run their Spark jobs on a schedule or on demand. Gold tables are served as a relational database, ready for SQL, BI tools and apps.</p>
         </li>
       </ol>
     </div>
@@ -450,7 +463,11 @@
       <div class="faq">
         <article class="faq-item">
           <h3>What is Prooflix?</h3>
-          <p>Prooflix is a self-hosted data platform for building data pipelines and running a medallion architecture. You install it on your own servers, Kubernetes cluster or cloud account instead of renting a hosted SaaS data platform.</p>
+          <p>Prooflix is a self-hosted, end-to-end data platform. It ingests data, processes it in Spark pipelines through a Bronze, Silver and Gold medallion architecture, and serves the result as a relational database. You install it on your own servers, Kubernetes cluster or cloud account instead of renting a hosted SaaS data platform.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Is Prooflix an end-to-end data platform?</h3>
+          <p>Yes. Prooflix covers the whole path in a single installation: ingestion from your sources, pipeline processing with Spark, Bronze, Silver and Gold medallion layers, and serving Gold data as a relational database you query with plain SQL. There is no need to stitch together separate ingestion, processing and serving products.</p>
         </article>
         <article class="faq-item">
           <h3>Is Prooflix a data platform on prem?</h3>
@@ -542,6 +559,7 @@
       <span>Prooflix</span>
     </div>
     <nav class="footer-links">
+      <a href="#end-to-end">End to end</a>
       <a href="#why">Why Prooflix</a>
       <a href="#platform">Platform</a>
       <a href="#how">How it works</a>
